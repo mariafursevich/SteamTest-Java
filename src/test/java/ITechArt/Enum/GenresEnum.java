@@ -58,4 +58,3 @@ public enum GenresEnum {
         return displayName;
     }
 }
-

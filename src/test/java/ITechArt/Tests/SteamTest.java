@@ -22,4 +22,3 @@ public class SteamTest extends TestBase {
         tearDown();
     }
 }
-
