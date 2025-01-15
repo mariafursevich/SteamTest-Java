@@ -8,24 +8,20 @@ import org.testng.annotations.BeforeTest;
 import static com.codeborne.selenide.Selenide.*;
 
 public class TestBase {
-
     protected final String baseUrl = "https://store.steampowered.com";
-
     @BeforeTest
-    protected void setup()  {
+    protected void setup() {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setPlatform(Platform.WINDOWS);
-
         String browser = System.getProperty("browser", "chrome");
-        switch(browser) {
+        switch (browser) {
             case "chrome" -> caps.setBrowserName(Browser.CHROME.browserName());
             case "edge" -> caps.setBrowserName(Browser.EDGE.browserName());
         }
         open(baseUrl);
     }
-
     @AfterTest
-    protected void tearDown(){
+    protected void tearDown() {
         WebDriverRunner.closeWebDriver();
     }
 }
