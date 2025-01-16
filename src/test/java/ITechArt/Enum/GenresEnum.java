@@ -49,7 +49,6 @@ public enum GenresEnum {
     RacingSim("RacingSim"),
     SportsSim("SportsSim"),
     TeamSports("TeamSports");
-
     private final String displayName;
     GenresEnum(String displayName) {
         this.displayName = displayName;
